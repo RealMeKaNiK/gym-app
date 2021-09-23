@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym App</title>
+    <link rel="stylesheet" href="../css/caloriecalculator.css">
+    <script src="../scripts/caloriecalculator.js"></script>
+</head>
+<body>
+    <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item-1">
+            <label>Gender:</label>
+            <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)"><span>Male</span>
+            <input type="radio" value="Female" id="female" onclick="uncheckMale(this)"><span>Female</span>      
+            <br>
+            <div class="slidecontainer">
+                <input type="range" min="13" max="80" value="13" class="slider" id="myRange">
+                <p>Age: <span id="demo"></span></p>
+              </div>
+              <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+           
+            <br>
+            <label>Height</label>
+            <input type="text" placeholder="Enter" id="height">
+            <br>
+            <label>Weight</label>
+            <input type="text" placeholder="Enter" id="weight">
+            <br>
+            <label>Choose Your Training Productivity</label>
+            <select id="exercise">
+                <option value="low">Malo</option>
+                <option value="medium">Srednje</option>
+                <option value="high">Puno</option>
+            </select>
+            <br>
+            <input type="button" value="STISNI ME" onclick="calculateCalorie()">
+        </div>
+
+        <div class="flexbox-item flexbox-item-2">
+            <p>Result:<span id="result"></span></p>
+        </div>
+    </div>
+</body>
+</html>
