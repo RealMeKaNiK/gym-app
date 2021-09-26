@@ -1,5 +1,6 @@
 :root{
   --importantParagraphs: #df6648;
+  --normalParagraphs: rgb(201, 209, 217);
 }
 
 body{
@@ -10,6 +11,7 @@ body{
 label{
   color: rgb(201, 209, 217);
   font-weight: bold;
+  font-size: 20px;
 }
 
 span{
@@ -33,9 +35,17 @@ span{
 }
 
 .flexbox-item-1{
-    padding: 10px;
+    padding: 20px;
     height: auto;
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputfield-container{
+  display: flex;
+  flex-direction: column;
 }
 
 .container{
@@ -46,18 +56,11 @@ span{
 .flexbox-item-2{
     text-align: center;
 }
-
-.slidecontainer {
-  height: auto;
-  margin-top: 20px;
-  width: 70%;
-  }
   
   input[type="range"]{
     -webkit-appearance:none;
     width:160px;
     height:20px;
-    margin-left: 10px;
     background: linear-gradient(to right, #9A2720 0%, #9A2720 100%);
     background-size:150px 10px;
     background-position:center;
@@ -94,7 +97,17 @@ span{
 
   input[type="button"]{
     text-align: center;
-    margin-left: 100px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: none;
+    border-color: #4caf50;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #89db8b;
+  }
+
+  input[type="button"]:hover{
+    background-color: #4caf50;
   }
 
 .flexbox-item-2 .result{
@@ -105,7 +118,11 @@ input[type="text"]
 {
   background-color: rgb(38,45,56);
   border: 2px solid rgb(70, 70, 70);
-
+  color: var(--normalParagraphs);
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  padding: 10px
 }
 
 #result{

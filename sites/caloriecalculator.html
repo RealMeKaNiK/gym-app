@@ -12,20 +12,21 @@
 <body>
     <div class="flexbox-container">
         <div class="flexbox-item flexbox-item-1">
-            <label>Gender:</label>
-            <label>
-                <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)">
-                <span>Male</span>
-            </label>
-            <label>
-                <input type="radio" value="Female" id="female" onclick="uncheckMale(this)">
-                <span>Female</span>
-            </label>     
-            <br>
-            <div class="slidecontainer">
-                <input type="range" min="13" max="80" value="13" class="slider" id="myRange">
-                <span>Age: <span id="demo"></span></span>
-              </div>
+            <div class="radio-container">
+                <label>Gender:</label>
+                <label>
+                    <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)">
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input type="radio" value="Female" id="female" onclick="uncheckMale(this)">
+                    <span>Female</span>
+                </label>
+            </div>     
+            <div class="slide-container">
+                <input type="range" min="13" max="80" value="20" class="slider" id="myRange">
+                <label>Age: <span id="demo"></span></label>
+              
               <script>
                 var slider = document.getElementById("myRange");
                 var output = document.getElementById("demo");
@@ -35,22 +36,22 @@
                   output.innerHTML = this.value;
                 }
                 </script>
-           
-            <br>
-            <label>Height</label>
-            <input type="text" placeholder="Enter" id="height" required>
-            <br>
-            <label>Weight</label>
-            <input type="text" placeholder="Enter" id="weight" required>
-            <br>
-            <label>Choose Your Training Productivity</label>
-            <select id="exercise">
-                <option value="low" selected>Malo</option>
-                <option value="medium">Srednje</option>
-                <option value="high">Puno</option>
-            </select>
-            <br>
-            <input type="button" value="STISNI ME" onclick="calculateCalorie()">
+           </div>
+           <div class="inputfield-container">
+                <label>Height</label>
+                <input type="text" placeholder="Enter" id="height" required>
+                <label>Weight</label>
+                <input type="text" placeholder="Enter" id="weight" required>
+                <label>Activity</label>
+                <select id="exercise">
+                    <option value="low" selected>Malo</option>
+                    <option value="medium">Srednje</option>
+                    <option value="high">Puno</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <input type="button" value="STISNI ME" onclick="calculateCalorie()">
+            </div>
         </div>
 
         <div class="flexbox-item flexbox-item-2">
