@@ -1,4 +1,3 @@
-
 function calculateCalorie()
 {
     if(!checkParameters())
@@ -15,11 +14,11 @@ function calculateCalorie()
 
     if(document.getElementById("male").checked)
     {
-        document.getElementById("result").innerHTML = Math.round(calculateResult(age, height, weight) + 5);
+        displayResults(calculateResult(age, height, weight) + 5);
     }
     else if(document.getElementById("female").checked)
     {
-        document.getElementById("result").innerHTML = Math.round(calculateResult(age, height, weight) - 161);
+        displayResults(Math.round(calculateResult(age, height, weight) -161));
     }
 }
 
@@ -43,6 +42,13 @@ function calculateResult(age, height, weight)
     }
 
     return calorieResult;
+}
+
+function displayResults(calories)
+{
+    document.getElementById("result-maintain").innerHTML = calories;
+    document.getElementById("result-bulk").innerHTML = calories + 200;
+    document.getElementById("result-cut").innerHTML = calories - 200;
 }
 
 function checkParameters()

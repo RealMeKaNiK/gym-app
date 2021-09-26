@@ -39,24 +39,34 @@
            </div>
            <div class="inputfield-container">
                 <label>Height</label>
-                <input type="text" placeholder="Enter" id="height" required>
+                <input type="text" placeholder="Enter Height in cm" id="height" required>
                 <label>Weight</label>
-                <input type="text" placeholder="Enter" id="weight" required>
+                <input type="text" placeholder="Enter Weight in kg" id="weight" required>
                 <label>Activity</label>
                 <select id="exercise">
-                    <option value="low" selected>Malo</option>
-                    <option value="medium">Srednje</option>
-                    <option value="high">Puno</option>
+                    <option value="low" selected>Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
                 </select>
             </div>
             <div class="button-container">
-                <input type="button" value="STISNI ME" onclick="calculateCalorie()">
+                <input type="button" value="CALCULATE" onclick="calculateCalorie()">
             </div>
         </div>
 
         <div class="flexbox-item flexbox-item-2">
+            <!--Format display as table and add show hide event with js-->
             <label>Result:</label>
-            <label id="result"></label>
+            <div class="maintain-calories">
+                <label>Maintain: <span id="result-maintain"></span></label>
+            </div>
+            <div class="gaining-calories">
+                <label>Bulk: <span id="result-bulk"></span></label>
+            </div>
+            <div class="cuting-calories">
+                <label>Cut: <span id="result-cut"></span></label>
+            </div>
+            
         </div>
     </div>
 </body>
