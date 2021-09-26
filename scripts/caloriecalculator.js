@@ -1,5 +1,11 @@
+
 function calculateCalorie()
 {
+    if(!checkParameters())
+    {
+        swal("Please choose Gender");
+        return;
+    }
     
     var age = document.getElementById("demo").textContent;
     var height = document.getElementById("height").value;
@@ -37,6 +43,13 @@ function calculateResult(age, height, weight)
     }
 
     return calorieResult;
+}
+
+function checkParameters()
+{
+    if(document.getElementById("male").checked == false && document.getElementById("female").checked == false)
+        return false;
+    return true;
 }
 
 function uncheckFemale(obj)

@@ -1,9 +1,23 @@
+:root{
+  --importantParagraphs: #df6648;
+}
+
 body{
     margin: 0;
+    background-color: rgb(13, 17, 23);
+}
+
+label{
+  color: rgb(201, 209, 217);
+  font-weight: bold;
+}
+
+span{
+  color: rgb(201, 209, 217);
+  font-weight: bold;
 }
 
 .flexbox-container{
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +28,12 @@ body{
 
 .flexbox-item{
     margin: 10px;
-    border: 2px solid black;
     width: 200px;
     height: 200px;
-    background-color: red;
 }
 
 .flexbox-item-1{
-    padding: 20px;
+    padding: 10px;
     height: auto;
     width: 500px;
 }
@@ -31,46 +43,74 @@ body{
     grid-template-columns: 100px 100px;
 }
 
-.item{
-    border: 2px solid black;
-}
-
 .flexbox-item-2{
     text-align: center;
 }
 
 .slidecontainer {
-    margin-top: 20px;
-    width: 100%;
+  height: auto;
+  margin-top: 20px;
+  width: 70%;
   }
   
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
+  input[type="range"]{
+    -webkit-appearance:none;
+    width:160px;
+    height:20px;
+    margin-left: 10px;
+    background: linear-gradient(to right, #9A2720 0%, #9A2720 100%);
+    background-size:150px 10px;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
     outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
   }
   
-  .slider:hover {
-    opacity: 1;
+  input[type="range"]:first-of-type{
+    margin-top:30px;
   }
   
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #04AA6D;
-    cursor: pointer;
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:#F26B5E;
+    position:relative;
+    z-index:3;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
   }
   
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #04AA6D;
-    cursor: pointer;
+  input[type="range"]::-webkit-slider-thumb:after{
+    content:" ";
+    width:160px;
+    height:10px;
+    position:absolute;
+    z-index:1;
+    right:20px;
+    top:5px;
+    background: #ff5b32;
+    background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
   }
+
+  input[type="button"]{
+    text-align: center;
+    margin-left: 100px;
+  }
+
+.flexbox-item-2 .result{
+  font-size: xx-large;
+}
+
+input[type="text"]
+{
+  background-color: rgb(38,45,56);
+  border: 2px solid rgb(70, 70, 70);
+
+}
+
+#result{
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--importantParagraphs);
+}

@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" co   ntent="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym App</title>
     <link rel="stylesheet" href="../css/caloriecalculator.css">
     <script src="../scripts/caloriecalculator.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <div class="flexbox-container">
         <div class="flexbox-item flexbox-item-1">
             <label>Gender:</label>
-            <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)"><span>Male</span>
-            <input type="radio" value="Female" id="female" onclick="uncheckMale(this)"><span>Female</span>      
+            <label>
+                <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)">
+                <span>Male</span>
+            </label>
+            <label>
+                <input type="radio" value="Female" id="female" onclick="uncheckMale(this)">
+                <span>Female</span>
+            </label>     
             <br>
             <div class="slidecontainer">
                 <input type="range" min="13" max="80" value="13" class="slider" id="myRange">
-                <p>Age: <span id="demo"></span></p>
+                <span>Age: <span id="demo"></span></span>
               </div>
               <script>
                 var slider = document.getElementById("myRange");
@@ -31,14 +38,14 @@
            
             <br>
             <label>Height</label>
-            <input type="text" placeholder="Enter" id="height">
+            <input type="text" placeholder="Enter" id="height" required>
             <br>
             <label>Weight</label>
-            <input type="text" placeholder="Enter" id="weight">
+            <input type="text" placeholder="Enter" id="weight" required>
             <br>
             <label>Choose Your Training Productivity</label>
             <select id="exercise">
-                <option value="low">Malo</option>
+                <option value="low" selected>Malo</option>
                 <option value="medium">Srednje</option>
                 <option value="high">Puno</option>
             </select>
@@ -47,7 +54,8 @@
         </div>
 
         <div class="flexbox-item flexbox-item-2">
-            <p>Result:<span id="result"></span></p>
+            <label>Result:</label>
+            <label id="result"></label>
         </div>
     </div>
 </body>
