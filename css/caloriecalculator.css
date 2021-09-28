@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 :root{
   --importantParagraphs: #df6648;
   --normalParagraphs: rgb(201, 209, 217);
+  --buttonColor: #4caf50;
 }
 
 body{
@@ -50,7 +53,11 @@ span{
 }
 
 .flexbox-item-2{
-    text-align: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
 }
   
   input[type="range"]{
@@ -73,10 +80,11 @@ span{
     -webkit-appearance:none;
     width:20px;
     height:20px;
-    background:#5ee1f2;
+    background: #89db8b;
     position:relative;
     z-index:3;
     box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+    border-radius: 6px;
   }
   
   input[type="range"]::-webkit-slider-thumb:after{
@@ -94,12 +102,13 @@ span{
   input[type="button"]{
     text-align: center;
     margin-top: 20px;
-    border-radius: 25px;
+    border-radius: 6px;
     border: none;
     border-color: #4caf50;
     font-size: 20px;
     padding: 10px;
     background-color: #89db8b;
+    cursor: pointer;
   }
 
   input[type="button"]:hover{
@@ -116,7 +125,7 @@ input[type="text"]
   border: 2px solid rgb(70, 70, 70);
   color: var(--normalParagraphs);
   font-size: 20px;
-  border-radius: 25px;
+  border-radius: 6px;
   border: none;
   padding: 10px
 }
@@ -152,6 +161,47 @@ input[type="text"]:focus{
   font-family: monospace;
   font-weight: bold;
   color: var(--importantParagraphs);
+}
+
+table{
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arimo', sans-serif;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: #eeeeee;
+  display: none;
+  animation: flyingtable 1s ease-out;
+}
+
+table td{
+  color: black;
+  text-align: right;
+  padding-right: 10px;
+
+}
+
+table th{
+  text-align: left;
+  padding-left: 10px;
+}
+
+table th, table td{
+  border-bottom: 3px solid #89db8b;
+}
+
+@keyframes flyingtable{
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 

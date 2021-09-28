@@ -1,3 +1,4 @@
+
 function calculateCalorie()
 {
     if(!checkParameters())
@@ -9,6 +10,12 @@ function calculateCalorie()
     var age = document.getElementById("demo").textContent;
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
+
+    if(height.length == 0 || weight.length == 0)
+    {
+        swal("Please fill all data")
+        return;
+    }
 
 
 
@@ -46,9 +53,10 @@ function calculateResult(age, height, weight)
 
 function displayResults(calories)
 {
-    document.getElementById("result-maintain").innerHTML = calories;
-    document.getElementById("result-bulk").innerHTML = calories + 200;
-    document.getElementById("result-cut").innerHTML = calories - 200;
+    document.getElementById("result-maintain").innerHTML = Math.round(calories) + " Calories/Per Day";
+    document.getElementById("result-bulk").innerHTML = Math.round(calories + 200) + " Calories/Per Day";
+    document.getElementById("result-cut").innerHTML = Math.round(calories - 200) + " Calories/Per Day";
+    document.getElementById("result-table").style.display = "table";
 }
 
 function checkParameters()

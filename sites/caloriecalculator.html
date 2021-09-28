@@ -55,18 +55,22 @@
         </div>
 
         <div class="flexbox-item flexbox-item-2">
-            <!--Format display as table and add show hide event with js-->
-            <label>Result:</label>
-            <div class="maintain-calories">
-                <label>Maintain: <span id="result-maintain"></span></label>
-            </div>
-            <div class="gaining-calories">
-                <label>Bulk: <span id="result-bulk"></span></label>
-            </div>
-            <div class="cuting-calories">
-                <label>Cut: <span id="result-cut"></span></label>
-            </div>
-            
+            <!--Format display as table and add show hide event with js--> 
+            <table id="result-table">
+                    <tr>
+                        <th>Maintain weight</th>
+                        <td id="result-maintain">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gain weight</th>
+                        <td id="result-bulk"></td>
+                    </tr>
+                    <tr>
+                        <th>Cut weight</th>
+                        <td id="result-cut"></td>
+                    </tr>
+            </table>
         </div>
     </div>
 </body>
