@@ -1,0 +1,66 @@
+/*https://www.bodybuilding.com/content/the-8-supplements-for-strength-athletes-and-bodybuilders.html*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root{
+    --importantParagraphs: #df6648;
+    --normalParagraphs: rgb(201, 209, 217);
+    --buttonColor: #4caf50;
+  }
+
+  /*Main Part, Main Flexbox*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main-flexbox{
+      background-color: green;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.main-flexbox-item{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.main-flexbox-item-1{
+    height: 400px;
+    width: 100%;
+}
+
+/*Inner Part of Main flexbox*/
+
+.inner-flexbox{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-flexbox-item{
+    background-color: violet;
+    height: auto;
+    width: 200px;
+    margin: 10px;
+    padding: 10px
+}
+
+/*Product card design*/
+
+.product-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 119px;
+    height: 119px;
+}
