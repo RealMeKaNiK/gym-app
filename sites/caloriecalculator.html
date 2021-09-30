@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" co   ntent="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym App</title>
+    <link rel="stylesheet" href="../css/caloriecalculator.css">
+    <script src="../scripts/caloriecalculator.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item-1">
+            <div class="radio-container">
+                <label>Gender:</label>
+                <label>
+                    <input type="radio" value="Male" id="male" onclick="uncheckFemale(this)">
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input type="radio" value="Female" id="female" onclick="uncheckMale(this)">
+                    <span>Female</span>
+                </label>
+            </div>     
+            <div class="slide-container">
+                <input type="range" min="13" max="80" value="20" class="slider" id="myRange">
+                <label>Age: <span id="demo"></span></label>
+              
+              <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+           </div>
+           <div class="inputfield-container">
+                <label>Height</label>
+                <input type="text" placeholder="Enter Height in cm" id="height" required>
+                <label>Weight</label>
+                <input type="text" placeholder="Enter Weight in kg" id="weight" required>
+                <label>Activity</label>
+                <select id="exercise">
+                    <option value="low" selected>Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <input type="button" value="CALCULATE" onclick="calculateCalorie()">
+            </div>
+        </div>
+
+        <div class="flexbox-item flexbox-item-2">
+            <!--Format display as table and add show hide event with js--> 
+            <table id="result-table">
+                    <tr>
+                        <th>Maintain weight</th>
+                        <td id="result-maintain">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gain weight</th>
+                        <td id="result-bulk"></td>
+                    </tr>
+                    <tr>
+                        <th>Cut weight</th>
+                        <td id="result-cut"></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
