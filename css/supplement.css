@@ -58,6 +58,8 @@ body{
     margin: auto;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: orange;
+    border-radius: 6px;
 }
 
 img{
